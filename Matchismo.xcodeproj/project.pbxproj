@@ -18,6 +18,7 @@
 		94A157781A70B13C007F7097 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A157771A70B13C007F7097 /* PlayingCard.m */; };
 		94A1577B1A70B167007F7097 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A1577A1A70B167007F7097 /* Deck.m */; };
 		94A1577E1A70B183007F7097 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A1577D1A70B183007F7097 /* PlayingCardDeck.m */; };
+		94A157811A720135007F7097 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A157801A720135007F7097 /* CardMatchingGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		94A1577A1A70B167007F7097 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		94A1577C1A70B183007F7097 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
 		94A1577D1A70B183007F7097 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+		94A1577F1A720135007F7097 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		94A157801A720135007F7097 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 		94A157751A70B033007F7097 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94A1577F1A720135007F7097 /* CardMatchingGame.h */,
+				94A157801A720135007F7097 /* CardMatchingGame.m */,
 				94A157721A70B02E007F7097 /* Card.h */,
 				94A157731A70B02E007F7097 /* Card.m */,
 				94A157761A70B13C007F7097 /* PlayingCard.h */,
@@ -251,6 +256,7 @@
 				94A157431A6F88A2007F7097 /* AppDelegate.m in Sources */,
 				94A157401A6F88A2007F7097 /* main.m in Sources */,
 				94A157781A70B13C007F7097 /* PlayingCard.m in Sources */,
+				94A157811A720135007F7097 /* CardMatchingGame.m in Sources */,
 				94A1577E1A70B183007F7097 /* PlayingCardDeck.m in Sources */,
 				94A1577B1A70B167007F7097 /* Deck.m in Sources */,
 				94A157741A70B02E007F7097 /* Card.m in Sources */,

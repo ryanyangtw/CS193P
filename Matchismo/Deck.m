@@ -40,13 +40,21 @@
 - (Card *)drawRandomCard
 {
     Card *randomCard = nil;
-    
+
     if ([self.cards count]) {
         unsigned index = arc4random() % [self.cards count];
         randomCard = self.cards[index];
         [self.cards removeObjectAtIndex:index];
+        
+        /*
+        NSLog(@"index: %u", index);
+        NSLog(@"%@" , self.cards[index]);
+        NSLog(@"%@", randomCard.contents);
+        Card *car = self.cards[index];
+        NSLog(@"test: %@", car.contents);
+        */
     }
-    
+
     return randomCard;
     
 }
