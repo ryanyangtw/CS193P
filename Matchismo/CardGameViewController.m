@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 Ryan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CardGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
-@interface ViewController ()
+@interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation ViewController
+@implementation CardGameViewController
 
 
 
@@ -34,31 +34,13 @@
 
 }
 
-/*
-- (Deck *)deck
+
+- (Deck *)createDeck //abstract
 {
-    if (!_deck) _deck = [self createDeck];
-    return _deck;
-}
-*/
-
-- (Deck *)createDeck
-{
-    return [[PlayingCardDeck alloc] init];
+    //return [[PlayingCardDeck alloc] init];
+    return nil;
 }
 
-/*
-- (void) setFlipCount:(int)flipCount{
-    _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
-    NSLog(@"flipCount changed to %d", self.flipCount);
-    
- 
-    //NSString *str = @"Test";
-    //NSLog(str);
-
-}
-*/
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     
@@ -67,22 +49,22 @@
     
     [self.game chooseCardAtIndex:chosenButtonIndex];
     [self updateUI];
-
+    
     /*
-    if ([sender.currentTitle length]) {
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
-                          forState:UIControlStateNormal];
-        [sender setTitle:@"" forState:UIControlStateNormal];
-    } else {
-        Card *randomCard = [self.deck drawRandomCard];
-        
-        if (randomCard) {
-            [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
-                          forState:UIControlStateNormal];
-            [sender setTitle:randomCard.contents forState:UIControlStateNormal];
-        }
-    }
-    */
+     if ([sender.currentTitle length]) {
+     [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
+     forState:UIControlStateNormal];
+     [sender setTitle:@"" forState:UIControlStateNormal];
+     } else {
+     Card *randomCard = [self.deck drawRandomCard];
+     
+     if (randomCard) {
+     [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
+     forState:UIControlStateNormal];
+     [sender setTitle:randomCard.contents forState:UIControlStateNormal];
+     }
+     }
+     */
     
     //self.flipCount++;
 }
@@ -113,6 +95,32 @@
 {
     return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
 }
+
+
+
+/*
+- (Deck *)deck
+{
+    if (!_deck) _deck = [self createDeck];
+    return _deck;
+}
+*/
+
+
+
+/*
+- (void) setFlipCount:(int)flipCount{
+    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+    NSLog(@"flipCount changed to %d", self.flipCount);
+    
+ 
+    //NSString *str = @"Test";
+    //NSLog(str);
+
+}
+*/
+
 
 
 /*
